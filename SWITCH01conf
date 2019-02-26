@@ -1,0 +1,16 @@
+!SWITCH01
+enable
+conf terminal
+hostname SWITCH01
+enable password cisco
+enable secret cisco
+service password-encryption
+banner motd “Acceso autorizado solo a personas con permiso”
+copy running-config startup-config
+crypto key generate rsa
+username admin password pollo
+‘A’
+interface GigabitEthernet 0/1
+ip address 10.34.56.2 255.255.255.240
+no shutdown
+copy running-config startup-config
