@@ -1,0 +1,18 @@
+!Router 1
+enable
+configure terminal
+hostname rgran01
+interface GigabitEthernet 0/0
+ip address 172.26.30.1 255.255.255.245
+no shutdown
+copy running-config startup-config
+!
+
+!Router 2
+enable
+configure terminal
+hostname rgran02
+interface GigabitEthernet 0/0
+ip address 172.28.30.1 255.255.255.0
+no shutdown
+copy running-config startup-config
