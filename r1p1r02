@@ -1,0 +1,8 @@
+!r1p1r01
+enable
+configure terminal
+hostname r1p1r02
+interface GigabitEthernet 0/0
+ip address 172.26.30.6 255.255.255.0
+no shutdown
+copy running-config startup-config

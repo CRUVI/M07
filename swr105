@@ -1,7 +1,7 @@
-!SWITCH01
+!swr105
 enable
 conf terminal
-hostname SWITCH01
+hostname swr105
 enable password cisco
 enable secret cisco
 service password-encryption
@@ -11,6 +11,7 @@ copy running-config startup-config
 crypto key generate rsa
 username admin password pollo
 interface GigabitEthernet 0/1
-ip address 10.34.56.2 255.255.255.240
+interface vlan1
+ip address 172.26.30.14 255.255.255.0
 no shutdown
 copy running-config startup-config

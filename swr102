@@ -1,0 +1,24 @@
+!swr102
+enable
+conf terminal
+hostname swr102
+enable password cisco
+enable secret cisco
+service password-encryption
+banner motd “Acceso autorizado solo a personas con permiso”
+‘A’
+copy running-config startup-config
+crypto key generate rsa
+username admin password pollo
+interface GigabitEthernet 0/1
+ip address 172.26.30.11 255.255.255.0
+no shutdown
+copy running-config startup-config
+
+! configuramos el switch para que coja la primera mac que encuntre por la F0/2 1 sola mac
+interface FastEthernet 0/2
+Switchport mode access
+switchport port-security maximum 1
+Switchport port-secur mac-address sticky
+Switchport port-security mac-address sticky
+Switchport port-security violation shutdown
