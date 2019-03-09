@@ -5,6 +5,7 @@
 
 ##LPD
 
+
 **LPD**, sistema de impresión Berkeley
 
 Gestor tradicional de UNIX de la plataforma UNIX BSD, controlado por el demonio de impresoras de linea(Line printer daemon). 
@@ -21,10 +22,8 @@ Utiliza el protocolo **LPD/LPR** donde los clientes se comunican con el demonio 
 
 **CUPS**(common Unix Printing System)
 ...
-
 Es el sistema de impresión mas comun en UNIX que utiliza el protocolo **IPP**(Internet Printing protocol) y integra **PostScript** que es uno de los lenguages de definición de paginas estandards.
-
-...
+'''
 
 
 Archivos de de configuración
@@ -46,61 +45,56 @@ Archivos de de configuración
 ## Comandos para la gestióm de la impressora
 
 - Listar dispositivos
-...
 
+'''
 $ lpinfo -v
-
-...
-
+'''
 - Listar contraladores
-
-...
+'''
 $lpinfo -m
-...
+'''
 
 - Establecer impresora predeterminada
 
-...
+'''
+$ poptions -d <printer>
 
-$ lpoptions -d <printer>
-
-...
+'''
 
 - Comprobar el estado
-...
 
+'''
 $ lpstat -s
 $ lpstat -p <printer>
-
-...
+'''
 
 - Habilitar&Deshabilitar impresora
 
-...
+'''
 
 cupsenable nombre-impresora
 cupsdisable nombre-impresora
 
-...
+'''
 
 
 ### Comandos basicos de configuración
 
 - Cambiar tamaño margenes
 
-...
+'''
 
 -lpoptions -o page-top=
 -lpoptions -o page-bottom=
 -lpoptions -o page-right=
 -lpoptions -o page-left=
 
-...
+'''
 
 -Cambiar formato pagina
 
-...
+'''
 
 lpoptions -o PageSize= A*
 
-...
+'''
