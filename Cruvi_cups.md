@@ -21,9 +21,9 @@ Utiliza el protocolo **LPD/LPR** donde los clientes se comunican con el demonio 
 
 
 **CUPS**(common Unix Printing System)
-...
+```
 Es el sistema de impresión mas comun en UNIX que utiliza el protocolo **IPP**(Internet Printing protocol) y integra **PostScript** que es uno de los lenguages de definición de paginas estandards.
-'''
+```
 
 
 Archivos de de configuración
