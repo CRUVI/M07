@@ -3,7 +3,7 @@
 ##  Servidores de impresión
 
 
-###LPD
+##LPD
 
 **LPD, sistema de impresión Berkeley
 
@@ -12,11 +12,11 @@ Gestor tradicional de UNIX de la plataforma UNIX BSD, controlado por el demonio 
 Utiliza el protocolo **LPD/LPR** donde los clientes se comunican con el demonio mediante el dispositivo /dev/printer y utilizando el archivo de configuración /etc/printcap que determina el directorip de la cola de trabajos de impresión.
 
 
-###LPRng
+##LPRng
 
 
 
-### CUPS
+## CUPS
 
 
 **CUPS**(common Unix Printing System)
@@ -41,17 +41,17 @@ Archivos de de configuración
 
 
 
-### Comandos para la gestióm de la impressora
+## Comandos para la gestióm de la impressora
 
 - Listar dispositivos
 ...
-# lpinfo -v
+$ lpinfo -v
 ...
 
 - Listar contraladores
 
 ...
-#lpinfo -m
+$lpinfo -m
 ...
 
 - Establecer impresora predeterminada
@@ -79,14 +79,14 @@ cupsdisable nombre-impresora
 - Cambiar tamaño margenes
 
 ...
-lpoptions -o page-top=
-lpoptions -o page-bottom=
-lpoptions -o page-right=
-lpoptions -o page-left=
+-lpoptions -o page-top=
+-lpoptions -o page-bottom=
+-lpoptions -o page-right=
+-lpoptions -o page-left=
 ...
 
 -Cambiar formato pagina
 
 ...
 lpoptions -o PageSize= A*
-
+...
